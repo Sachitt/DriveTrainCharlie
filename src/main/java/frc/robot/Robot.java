@@ -7,6 +7,7 @@
 
 package frc.robot;
 
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -35,6 +36,7 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     driver = new XboxController(3);
     driveTrain = new DriveTrain();
+    CameraServer.getInstance().startAutomaticCapture();
   }
 
   /**

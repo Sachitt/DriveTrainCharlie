@@ -17,13 +17,11 @@ public class DriveTrain {
     VictorSP RBMotor, RFMotor, LBMotor, LFMotor;
     SpeedControllerGroup spdContGL, spdContGR; 
     DoubleSolenoid solenoid;
-    CameraServer camera;
 
     private boolean closed = true;
     
     public DriveTrain() {
-        camera = new CameraServer();
-        
+
         
         solenoid = new DoubleSolenoid(0,1);
 
